@@ -6,7 +6,11 @@ pub fn greet(name: &str) -> String {
     println!("{}", value);
     return value;
 }
-// wasm-pack build --target web
+
+#[wasm_bindgen]
+pub fn add(n1: f64, n2: f64) -> f64 {
+    return n1 + n2;
+}
 
 #[wasm_bindgen]
 pub fn greet_alert(name: &str) {
