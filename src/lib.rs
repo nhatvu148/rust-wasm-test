@@ -22,6 +22,16 @@ pub fn greet_alert(name: &str) {
 }
 
 #[wasm_bindgen]
+pub fn get_now() -> usize {
+    now()
+}
+
+#[wasm_bindgen]
 extern "C" {
     pub fn alert(s: &str);
+}
+
+#[wasm_bindgen(module = "/www/utils/date.js")]
+extern "C" {
+    fn now() -> usize;
 }

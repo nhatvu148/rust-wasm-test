@@ -1,4 +1,4 @@
-import init, { greet, greet_alert, add } from "rust-wasm-test";
+import init, { greet, greet_alert, add, get_now } from "rust-wasm-test";
 
 init().then((_) => {
   const value = greet("Akiyama");
@@ -9,4 +9,5 @@ init().then((_) => {
   let n1 = 10;
   let n2 = 20;
   console.log(`${n1} + ${n2} = ${add(n1, n2)}`);
+  console.log("Now is ", get_now());
 });
